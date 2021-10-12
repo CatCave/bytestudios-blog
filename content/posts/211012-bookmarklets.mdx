@@ -6,4 +6,8 @@ author: byte
 tags:
   - tech
 ---
-test
+## Remove CSS
+
+`javascript:for(i=0;i<document.styleSheets.length;i++){void(document.styleSheets.item(i).disabled=true);}el=document.getElementsByTagName('*');for(i=0;i<el.length;i++){void(el[i].style.cssText='');}`
+
+This removes all CSS from the current page.
