@@ -1,13 +1,22 @@
 {
+  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
+  "site_title": "Next.js Netlify Blog",
+  "site_description": "Next.js blog template for Netlify",
   "base_url": "https://bytestudios-blog.netlify.app/",
   "site_title": "Byte Studios Blog",
   "site_description": "Byte Studios Official Blog Page",
   "site_keywords": [
-    "games",
-    "development",
-    "tech"
+    {
+      "keyword": "games"
+    },
+    {
+      "keyword": "tech"
+    },
+    {
+      "keyword": "development"
+    }
   ],
   "posts_per_page": 5,
   "twitter_account": "@bytestudios1",
   "github_account": "byte-studios"
-}
+} 
