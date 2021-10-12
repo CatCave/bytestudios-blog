@@ -1,7 +1,4 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
   "base_url": "https://bytestudios-blog.netlify.app/",
   "site_title": "Byte Studios Blog",
   "site_description": "Byte Studios Official Blog Page",
