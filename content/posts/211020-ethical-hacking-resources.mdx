@@ -1,0 +1,80 @@
+---
+slug: 211020-ethical-hacking-resources
+title: Ethical Hacking Club Resources
+date: 2021-20-10
+author: byte
+tags:
+  - document
+---
+This resource page is targeted towards members of the Ethical Hacking Club.
+
+## Installing GNOME Desktop Environment (Arch)
+
+If you are logged in as *root* there is no need to use *sudo* to run these commands. This guide assumes you are logged in as root, if you aren't ensure to use sudo to grant root privileges. 
+
+### Step 1 - Upgrade your System
+Run the following command to upgrade your system to the latest version.
+
+    # pacman -Syu
+Reboot to apply any updates.
+
+    # reboot
+### Step 2 - Install Xorg or X Windows System
+
+Install X Window System using the following command.
+
+    # pacman -S xorg xorg-server
+Press `Enter` to confirm installations for all of the modules listed.
+![Select all components for Xorg installation](https://phoenixnap.com/kb/wp-content/uploads/2021/04/how-to-install-gnome-in-arch-linux-03.png)
+
+When prompted, type in Y and press Enter to confirm that you want to install the aforementioned packages.
+
+### Step 3 - Install the GNOME Desktop Environment
+Install the GNOME desktop environment using the following command.
+
+    # pacman -S gnome
+Press `Enter` again to select all of the modules listed.
+![Select options for the GNOME installation](https://phoenixnap.com/kb/wp-content/uploads/2021/04/how-to-install-gnome-in-arch-linux-05.png)
+
+If you are missing any dependencies, GNOME offers a choice of provider. For each prompt that is presented, select the appropriate provider and press `Enter` to confirm the download.
+![Choose providers for downloading installation dependencies](https://phoenixnap.com/kb/wp-content/uploads/2021/04/how-to-install-gnome-in-arch-linux-06.png)
+When you are prompted, type in Y and press Enter to continue with the installation process. 
+### Step 4 - Enable gdm.service (GNOME Display Manager)
+
+Once GNOME has been installed, start the gdm service using the following command. This enables the GNOME GUI.
+
+    # systemctl start gdm.service
+
+Log in with the credentials given to you and open a new terminal window (`CTRL` + `ALT` + `T`).
+
+Use the following command to automatically start the gdm service on system boot.
+
+    # systemctl enable gdm.service
+
+### Configure Display Manager (not required)
+Install the appropriate Display Manager you would like to use. For this example we will use `SDDM`.
+
+    # pacman -S sddm
+
+When prompted, type in Y and hit Enter to continue.
+
+Stop the gdm service by using:
+
+    # systemctl stop gdm.service
+    # systemctl disable gdm.service
+
+Start the SDDM Display Manager by running (here we are configuring it so it starts at system boot):
+
+    # systemctl start sddm.service
+    # systemctl enable sddm.service
+
+**Reboot your system to apply the changes.**
+
+    # reboot
+### Optional Commands
+
+If you'd like you can install some software with your new Arch Linux system.
+
+    pacman -S firefox vlc leafpad
+
+The aforementioned command will install the Firefox web browser, VLC Media Player and Leafpad text editor.
